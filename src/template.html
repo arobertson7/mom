@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Drop Down Menu</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header id="header">
+            <nav>
+                <button id="menu-button">
+                    <img src="./menu.svg" alt="menu icon" />
+                </button>
+                <h2>Drop Down Menu</h2>
+            </nav>
+        </header>
+
+        <ul id="menu" style="visibility: hidden">
+            <!-- style="visibility: hidden;" -->
+            <li class="california">California</li>
+            <li class="dresden">Dresden</li>
+            <li class="switzerland">Switzerland</li>
+            <li class="amsterdam">Amsterdam</li>
+            <li class="paris">Paris</li>
+            <li class="nyc">New York</li>
+        </ul>
+
+        <div id="image-carousel-frame">
+            <div id="carousel-slides-container">
+                <div class="slide" style="visibility: visible">
+                    <img src="./cali.jpg" alt="california image" />
+                    <h5>California</h5>
+                </div>
+                <div class="slide" style="visibility: hidden">
+                    <img src="./dresden.jpg" alt="dresden image" />
+                    <h5>Dresden</h5>
+                </div>
+                <div class="slide" style="visibility: hidden">
+                    <img src="./switzerland.jpg" alt="switzerland image" />
+                    <h5>Switzerland</h5>
+                </div>
+                <div class="slide" style="visibility: hidden">
+                    <img src="./amsterdam.jpg" alt="amsterdam image" />
+                    <h5>Amsterdam</h5>
+                </div>
+                <div class="slide" style="visibility: hidden">
+                    <img src="./paris.jpg" alt="paris image" />
+                    <h5>Paris</h5>
+                </div>
+                <div class="slide" style="visibility: hidden">
+                    <img src="./nyc.jpg" alt="nyc image" />
+                    <h5>NYC</h5>
+                </div>
+            </div>
+            <button class="next-slide-button">
+                <img src="./next-arrow.svg" alt="next arrow" />
+            </button>
+            <button class="prev-slide-button">
+                <img src="./prev-arrow.svg" alt="prev arrow" />
+            </button>
+
+            <div class="nav-dots">
+                <img src="./filled-dot.svg" alt="empty nav dot">
+                <img src="./empty-dot.svg" alt="empty nav dot">
+                <img src="./empty-dot.svg" alt="empty nav dot">
+                <img src="./empty-dot.svg" alt="empty nav dot">
+                <img src="./empty-dot.svg" alt="empty nav dot">
+                <img src="./empty-dot.svg" alt="empty nav dot">
+            </div>
+        </div>
+    </body>
+</html>

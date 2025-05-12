@@ -1,0 +1,219 @@
+/* RESET */
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+  font-family: "Red Hat Display";
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/* *********************************************************************************************************************************** */
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  position: relative;
+  background: linear-gradient(to bottom right, white, 3%, black);
+  /* background: linear-gradient(to top, white, 0.5%, black, 95%, white); */
+}
+
+#header {
+    position: relative;
+    width: 100%;
+    height: 8%;
+    z-index: 200;
+}
+
+#header nav {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.766);
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav button {
+    position: absolute;
+    left: 15px;
+    width: 50px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(44, 110, 209, 0.826);
+    box-shadow: 0.5px 0.5px 2px 1px rgba(0, 0, 0, 0.271);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav h2 {
+    font-size: 1.3rem;
+}
+
+ul {
+    padding: 0px;
+    width: 100%;
+    height: 60%;
+    list-style-type: none;
+}
+
+li {
+    opacity: 0;
+    width: 100%;
+    height: 16.666666%;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    border: 0.5px solid rgba(0, 0, 0, 0.195);
+    transition: opacity 0.3s ease;
+}
+
+li:hover {
+    background-color: rgb(245, 245, 245, 0.8);
+}
+
+/* image carousel */
+
+#image-carousel-frame {
+  position: absolute;
+  /* background-color: white; */
+  border-radius: 15px;
+  border: 5px solid silver;
+  width: 80%;
+  height: 75%;
+  top: 12%;
+  left: 10%;
+  z-index: 100;
+}
+
+#carousel-slides-container {
+  position: relative;
+  /* z-index: 0; */
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.slide {
+  opacity: 0;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 0.5s ease;
+}
+
+.slide:first-child {
+  opacity: 1;
+}
+
+.slide img {
+  position: absolute;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slide h5 {
+  position: absolute;
+  bottom: 20px;
+  width: 60%;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+  font-size: 1.6rem;
+  background-color: rgba(0, 0, 0, 0.602);
+  border-radius: 15px;
+  letter-spacing: 0.07rem;
+}
+
+.next-slide-button, .prev-slide-button {
+  position: absolute;
+  top: 45%;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.504);
+  border: none;
+  border-radius: 10px;
+}
+
+.next-slide-button {
+  right: 10px;
+}
+
+.prev-slide-button {
+  left: 10px;
+}
+
+.next-slide-button img, .prev-slide-button img {
+  width: 40px;
+}
+
+.nav-dots {
+  position: absolute;
+  bottom: -50px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 15px;
+}
+
+.nav-dots img {
+  width: 17px;
+}
